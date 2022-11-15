@@ -21,6 +21,7 @@ class TcpServer extends Thread {
 
 			String cMsg = "";
 			String sMsg = "";
+			int cont=0;
 
 			while (!cMsg.equals("end")) {
 
@@ -29,8 +30,9 @@ class TcpServer extends Thread {
 				System.out.println("Server.Thread " + clientNo + " Ricevuto messaggio " + cMsg );
 
 				//Echo
-				sMsg=cMsg;
-				System.out.println("Server.Thread " + clientNo + " Invio messaggio " + sMsg );
+				
+				//sMsg=MultithreadedTcpServer.
+				System.out.println("Server.Thread " + clientNo + " Dispenser number " + MultithreadedTcpServer.getDispenserNumber());
 				outStream.writeUTF(sMsg);
 				outStream.flush();
 			}
