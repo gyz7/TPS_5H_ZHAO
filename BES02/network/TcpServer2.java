@@ -32,6 +32,7 @@ class TcpServer extends Thread {
 				//Echo
 				
 				//sMsg=MultithreadedTcpServer.
+				
 				System.out.println("Server.Thread " + clientNo + " Dispenser number " + MultithreadedTcpServer.getDispenserNumber());
 				outStream.writeUTF(sMsg);
 				outStream.flush();
